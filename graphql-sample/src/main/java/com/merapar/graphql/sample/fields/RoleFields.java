@@ -90,7 +90,7 @@ public class RoleFields implements GraphQlFields {
                 .build();
 
         addRoleField = newFieldDefinition()
-                .name("addRole").description("Add new role")
+                .name("addRoleAction").description("Add new role")
                 .type(roleType)
                 .argument(newArgument().name(INPUT).type(new GraphQLNonNull(addRoleInputType)).build())
                 .dataFetcher(environment -> roleDataFetcher.addRole(getInputMap(environment)))
